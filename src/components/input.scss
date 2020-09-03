@@ -1,0 +1,39 @@
+.form-group {
+    width: 400px;
+    position: relative;
+}
+
+.card {
+    padding: 30px;
+    margin: 10px
+}
+
+.input-label {
+    float: left;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #002636;
+}
+
+.required {
+    color: red;
+}
+
+.custom-input {
+    width: 100%;
+    font-size: 14px;
+}
+
+.input-invalid-feedback {
+    position: absolute;
+    top: 66px;
+}
+
+.append-value {
+    border-radius: 0.25rem;
+    margin-left: -1px;
+    border: 1px solid rgba(117, 117, 117, 0.6);
+    background-color: #F2F2F2;
+    padding: 10px;
+}

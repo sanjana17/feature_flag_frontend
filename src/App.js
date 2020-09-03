@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import { Switch, Route, withRouter } from "react-router-dom";
+import "./App.css";
+import Features from "./routes/Features/FeaturesContainer";
+import EditFeature from "./routes/Features/EditFeatureContainer";
+import Home from "./routes/Home/Home";
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Switch>
+          <Route exact path="/features" component={Features} />
+          <Route exact path="/" component={Home} />
+          <Route
+            exact
+            path="/editFeature"
+            render={(props) => <EditFeature {...props} key="create-feature" />}
+          />
+          <Route
+            path="/editFeature/:name"
+            render={(props) => <EditFeature {...props} featureExists />}
+          />
+        </Switch>
+      </Layout>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);

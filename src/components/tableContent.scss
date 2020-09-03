@@ -1,0 +1,71 @@
+.react-bootstrap-table table {
+    table-layout: auto;
+}
+
+.table {
+    font-size: 14px;
+}
+
+.table thead {
+    background-color: $color-gray-light;
+}
+
+.table td:first-child,
+.table th:first-child {
+    padding-left: 30px;
+}
+
+.table td:last-child,
+.table th:last-child {
+    padding-right: 30px;
+}
+
+.table thead th {
+    padding: 20px 12px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.table td {
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #969696;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #052635;
+    vertical-align: middle;
+    max-width: 220px;
+}
+
+.order-4,
+.caret-4-asc,
+.caret-4-desc {
+    margin-left: 5px;
+}
+
+.order-4::after {
+    display: none;
+}
+
+.order-4::before {
+    display: none;
+}
+
+.caret-4-asc::after {
+    display: none;
+}
+
+.caret-4-desc::before {
+    display: none;
+}
+
+.caret-4-asc::before {
+    @extend %arrow;
+    transform: rotate(180deg);
+}
+
+.caret-4-desc::after {
+    @extend %arrow;
+}
